@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int marks[5];
+    int i, j, temp;
+
+    // Enter marks
+    cout << "Enter marks of 5 students:" << endl;
+
+    for(i = 0; i < 5; i++)
+    {
+        cin >> marks[i];
+    }
+
+    // Arrange marks from highest to lowest
+    for(i = 0; i < 5; i++)
+    {
+        for(j = i + 1; j < 5; j++)
+        {
+            if(marks[i] < marks[j])
+            {
+                temp = marks[i];
+                marks[i] = marks[j];
+                marks[j] = temp;
+            }
+        }
+    }
+
+    // Display marks
+    cout << "Marks from highest to lowest:" << endl;
+
+    for(i = 0; i < 5; i++)
+    {
+        cout << marks[i] << endl;
+    }
+
+    return 0;
+}
