@@ -1,0 +1,29 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int queue[5];
+    int i = 0;
+
+    cout << "Enter 5 order numbers:\n";
+
+    while(i < 5)
+    {
+        cin >> queue[i];
+        i++;
+    }
+
+    cout << "\nProcessing Orders:\n";
+
+    i = 0;
+
+    while(i < 5)
+    {
+        cout << queue[i] << endl;
+        i++;
+    }
+
+    return 0;
+}
