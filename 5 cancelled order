@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int stack[5];
+    int top = -1;
+    int i = 0;
+
+    cout << "Enter 5 cancelled order numbers:\n";
+
+    while(i < 5)
+    {
+        cin >> stack[++top];
+        i++;
+    }
+
+    cout << "\nCancelled Orders (Most Recent First):\n";
+
+    while(top >= 0)
+    {
+        cout << stack[top] << endl;
+        top--;
+    }
+
+    return 0;
+}
